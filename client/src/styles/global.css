@@ -1,0 +1,335 @@
+/* ---------- GLOBAL ---------- */
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #141420, #07070b);
+  color: #e5e7eb;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont;
+}
+
+input,
+button {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+}
+
+input {
+  background: #1c1c27;
+  color: white;
+  border: 1px solid #2f2f3d;
+}
+
+input:focus {
+  outline: none;
+  border-color: #6366f1;
+}
+
+button {
+  background: linear-gradient(135deg, #6366f1, #7c7cff);
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+
+/* ---------- CENTERED AUTH PAGES ---------- */
+
+.center {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  gap: 12px;
+}
+
+/* ---------- DASHBOARD ---------- */
+
+.dashboard {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* HEADER */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+/* TASK FORM */
+
+.create-box {
+  background: #12121a;
+  padding: 20px;
+  border-radius: 14px;
+  margin-bottom: 40px;
+}
+
+/* SECTION TITLES */
+
+.section-title {
+  margin-top: 40px;
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+  color: #a5b4fc;
+}
+
+/* TASK CARD */
+
+.task-card {
+  background: linear-gradient(180deg, #151521, #101018);
+  padding: 18px;
+  border-radius: 14px;
+  margin-bottom: 16px;
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.03);
+}
+
+/* COLLAB TASK SPECIAL */
+
+.collab-card {
+  border: 1px solid #6366f1;
+  background: linear-gradient(180deg, #1a1a30, #12121f);
+}
+
+/* BUTTON ROW */
+
+.btn-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+/* SUBTASK */
+
+.subtask {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+/* INVITE BOX */
+
+.invite-box {
+  background: #12121a;
+  padding: 20px;
+  border-radius: 14px;
+  margin-top: 30px;
+}
+
+
+/* HOME BUTTON SPACING */
+.home-buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 25px;
+}
+
+/* NAVBAR */
+
+.navbar {
+  height: 60px;
+  background: rgba(10,10,20,0.8);
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  border-bottom: 1px solid #1f1f2f;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  font-size: 22px;
+}
+
+/* FOOTER */
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: #9ca3af;
+  border-top: 1px solid #1f1f2f;
+}
+
+/* FILTER BAR */
+
+.filter-bar {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.filter-bar input,
+.filter-bar select {
+  background: #1c1c27;
+  color: white;
+  border: 1px solid #2f2f3d;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  .dashboard {
+    padding: 20px;
+  }
+
+  .filter-bar {
+    flex-direction: column;
+  }
+
+  .btn-row {
+    flex-direction: column;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+}
+
+/* LIGHT THEME */
+
+body.light {
+  background: #f4f5f7;
+  color: #0f172a;   /* darker neutral */
+}
+
+body.light h1,
+body.light h2,
+body.light h3,
+body.light h4 {
+  color: #020617;
+}
+
+body.light p,
+body.light small,
+body.light span {
+  color: #1e293b;
+}
+
+
+body.light input,
+body.light select {
+  background: white;
+  color: black;
+  border: 1px solid #ccc;
+}
+
+body.light .task-card {
+  background: white;
+  color: black;
+}
+
+body.light .create-box,
+body.light .invite-box {
+  background: #eaeaea;
+}
+
+body.light .collab-card {
+  border: 1px solid #6366f1;
+}
+
+/* TOGGLE BUTTON */
+
+.header button:first-child {
+  background: linear-gradient(135deg, #facc15, #f59e0b);
+}
+
+/* =============================== */
+/* GLOBAL INDIGO SHADOW SYSTEM    */
+/* =============================== */
+
+:root {
+  --glow: 0 0 15px rgba(99,102,241,0.45),
+          0 0 30px rgba(99,102,241,0.25);
+
+  --soft-shadow: 0 10px 35px rgba(0,0,0,0.7),
+                 0 0 0 1px rgba(99,102,241,0.15);
+}
+
+/* CARDS */
+
+.task-card,
+.create-box,
+.invite-box {
+  box-shadow: var(--soft-shadow), var(--glow);
+}
+
+/* INPUTS & SELECTS */
+
+input,
+select {
+  box-shadow: inset 0 0 8px rgba(99,102,241,0.35),
+              var(--glow);
+}
+
+/* BUTTONS */
+
+button {
+  box-shadow: var(--glow);
+}
+
+/* HEADER */
+
+.header {
+  border-bottom: 1px solid rgba(99,102,241,0.2);
+  padding-bottom: 12px;
+}
+
+/* TEXT GLOW */
+
+h1, h2, h3, h4 {
+  text-shadow: 0 0 10px rgba(99,102,241,0.6);
+}
+
+/* HOVER ENHANCEMENT */
+
+.task-card:hover,
+.create-box:hover,
+.invite-box:hover,
+button:hover {
+  box-shadow:
+    0 0 25px rgba(99,102,241,0.7),
+    0 0 50px rgba(99,102,241,0.4);
+}
+
+/* LIGHT MODE (SUBTLE) */
+
+body.light .task-card,
+body.light .create-box,
+body.light .invite-box {
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+body.light h1,
+body.light h2,
+body.light h3 {
+  text-shadow: none;
+}
