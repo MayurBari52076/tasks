@@ -29,9 +29,10 @@ export const createInvite = async (req, res) => {
   });
 
   res.json({
-    message: "Invite created",
-    link: `http://localhost:5173/accept-invite/${token}`
+  message: "Invite created",
+  link: `${process.env.CLIENT_URL}/accept-invite/${token}`
   });
+
 };
 
 export const acceptInvite = async (req, res) => {
